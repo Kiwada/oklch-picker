@@ -12,7 +12,10 @@ function sync3dHeight(): void {
 show3d.subscribe(enabled => {
   card3d.classList.toggle('is-shown', enabled)
   card3d.setAttribute('aria-hidden', (!enabled).toString())
-  if (enabled) sync3dHeight()
+  if (enabled) {
+    sync3dHeight()
+    requestAnimationFrame(sync3dHeight)
+  }
 })
 
 url.subscribe(value => {

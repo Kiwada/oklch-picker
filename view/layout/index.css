@@ -12,8 +12,8 @@
   @media (width < 830px) {
     grid-template:
       'title'
-      'intro'
       'cards'
+      'intro'
       'prefs';
     padding-bottom: 450px;
 
@@ -25,8 +25,8 @@
   @media (width >= 830px) and (width < 1230px) {
     grid-template:
       'title title'
-      'intro prefs'
       'main  main'
+      'intro prefs'
       'cards cards';
     padding-bottom: 28px;
   }
@@ -34,8 +34,8 @@
   @media (width >= 1230px) {
     grid-template:
       'title title title'
-      'intro cards cards'
       'main  cards cards'
+      'intro cards cards'
       'prefs cards cards';
   }
 
