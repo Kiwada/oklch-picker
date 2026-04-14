@@ -1,0 +1,79 @@
+.sample {
+  --sample-display: var(--surface-1);
+}
+
+.sample_reader {
+  @mixin visual-hidden;
+}
+
+.sample_preview {
+  position: relative;
+  height: 166px;
+  overflow: hidden;
+  background: var(--opacity-pattern);
+  border-radius: 24px;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    content: '';
+    background: var(--sample-display);
+    border-radius: inherit;
+  }
+}
+
+.sample_meta {
+  display: none;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+
+  .sample.is-extra & {
+    display: flex;
+  }
+}
+
+.sample_unavailable {
+  flex: 1;
+  font-size: 10px;
+  line-height: 16px;
+  color: var(--text-secondary);
+}
+
+.sample_details {
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+  align-items: center;
+}
+
+.sample_space,
+.sample_note {
+  padding: 5px 10px;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--text-badge);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--surface-badge);
+  border: none;
+  border-radius: 999px;
+}
+
+.sample_space {
+  display: none;
+
+  .sample.is-wide-gamut & {
+    display: inline-flex;
+  }
+}
+
+.sample_action {
+  display: none;
+  cursor: pointer;
+
+  .sample.is-fallback & {
+    display: inline-flex;
+  }
+}

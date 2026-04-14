@@ -1,0 +1,25 @@
+include ../chart/mixin.pug
+include ../field/mixin.pug
+include ../card/mixin.pug
+
+.layout
+  .layout_title
+    include ../title/index.pug
+  .layout_intro
+    include ../intro/index.pug
+  include ../main/index.pug
+
+  .layout_cards
+    .layout_l
+      +card('l')
+    .layout_c
+      +card('c')
+    .layout_extra
+      .layout_3d
+        +card('3d')
+      +card('a')
+    .layout_h
+      +card('h')
+
+  .layout_prefs
+    include ../settings/index.pug

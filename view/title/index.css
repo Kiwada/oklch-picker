@@ -1,0 +1,27 @@
+.title {
+  position: relative;
+  padding: 16px 12px;
+}
+
+.title_kicker {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.title_text {
+  padding-top: 10px;
+  font-size: 27px;
+  line-height: 31px;
+  text-align: start;
+}
+
+.title_subtitle {
+  max-width: 42ch;
+  padding-top: 10px;
+  font-size: 11px;
+  line-height: 18px;
+  color: var(--text-secondary);
+}

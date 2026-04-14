@@ -1,0 +1,24 @@
+- let presets = [{ format: 'HEX', label: 'Azul oceano', color: '#0ea5e9' }, { format: 'RGB', label: 'Verde folha', color: 'rgb(34 197 94)' }, { format: 'HSL', label: 'Coral quente', color: 'hsl(18 92% 62%)' }, { format: 'OKLCH', label: 'Violeta vivo', color: 'oklch(0.72 0.19 312)' }]
+
+section.intro( aria-label="Introdução ao conversor" )
+  p.intro_kicker Trabalho de interface
+  h2.intro_title Entenda a mesma cor em vários formatos
+  p.intro_text
+    = `Escolha um exemplo rápido ou cole um código de cor para acompanhar luminosidade, croma, matiz e opacidade dentro do espaço ${LCH ? 'LCH' : 'OKLCH'}.`
+  .intro_meta
+    .intro_metaItem
+      span.intro_metaLabel Entradas aceitas
+      strong.intro_metaValue HEX, RGB, HSL e OKLCH
+    .intro_metaItem
+      span.intro_metaLabel Saídas úteis
+      strong.intro_metaValue OKLCH, HEX, RGB, HSL, P3 e LAB
+  p.intro_hint Os botões abaixo usam formatos diferentes de entrada para demonstrar a conversão.
+  .intro_presets
+    each preset in presets
+      button.intro_preset(
+        type="button"
+        data-color=preset.color
+        aria-label=`Carregar exemplo ${preset.label} em ${preset.format}`
+      )
+        span.intro_presetFormat= preset.format
+        span.intro_presetLabel= preset.label

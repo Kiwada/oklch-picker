@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "target": "ES2024",
+    "module": "esnext",
+    "strict": true,
+    "noEmit": true
+  },
+  "include": ["**/*.ts", "**/*.js"],
+  "exclude": ["dist/*"]
+}

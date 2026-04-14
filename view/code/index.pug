@@ -1,0 +1,31 @@
+.code.is-lch
+  +field(LCH ? 'Código CSS em LCH' : 'Código CSS em OKLCH', 'o', {
+    type: 'text'
+  })
+
+.code.is-rgb
+  +field('Código convertido', 'r', {
+    type: 'text',
+    options: {
+      'hex/rgba': 'Automático (HEX/RGBA)',
+      'hex': '',
+      'rgb': '',
+      'hsl': '',
+      'p3': '',
+      'lch': '',
+      'lab': '',
+      'oklab': '',
+      'lrgb': '',
+      'numbers': '',
+      'figmaP3': ''
+    },
+    optionsLabel: 'Escolher formato de saída'
+  })
+  .code_note.is-paste
+    = `Cole HEX, RGB ou HSL para converter para ${LCH ? 'LCH' : 'OKLCH'}`
+  .code_note.is-fallback.is-hidden( aria-hidden="true" )
+    = 'Fallback sRGB mais próximo dentro do gamut disponível'
+  .code_note.is-figma.is-hidden( aria-hidden="true" )
+    = 'Use no Figma com o '
+    a.code_link( href="https://help.figma.com/hc/en-us/articles/360039825114-Manage-color-profiles-in-design-files#h_01H6Q1C5DK2JMQ8QFQBKEQ6AM0" ) perfil de cor P3
+  .code_format

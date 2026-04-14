@@ -1,0 +1,10 @@
+include ../button/mixin.pug
+
+article.fullmodel.is-hidden( aria-hidden="true" inert )
+  h2.title
+    = `${LCH ? 'LCH' : 'OKLCH'} em 3D`
+  .fullmodel_status
+  .fullmodel_button
+    +button('Voltar ao conversor', 'cross', 'close3d')
+  canvas.fullmodel_canvas( aria-hidden="true" )
+  .fullmodel_note Arraste para girar • Role para aproximar • Botão direito para mover
